@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>baydeon</title>
+    
+    <!-- 
+      FAVICON:
+      Tento odkaz je správny pre váš FTP server. Keď nahráte súbor 'favicon.ico'
+      do rovnakého adresára ako tento HTML súbor, prehliadač ho načíta ako ikonu karty.
+      UPOZORNENIE: V tomto prostredí pre náhľad sa ikona pravdepodobne nezobrazí,
+      pretože nemáme prístup k vášmu súboru 'favicon.ico'. Bude však fungovať na vašom webe.
+    -->
+    <link rel="icon" href="https://baydeon.com/favicon.ico" type="image/x-icon">
+
+    <!-- Tailwind CSS CDN for rapid styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Custom styles to apply the Inter font and other base settings */
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f5f5f7; /* Apple's light gray background */
+            color: #1d1d1f; /* Apple's primary text color */
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Styling for the code animation cursor */
+        .code-cursor {
+            display: inline-block;
+            width: 8px;
+            height: 1.1em; /* Adjusted height to match font size */
+            background-color: #B1B1B1; /* Updated color for dark theme */
+            animation: blink 1s step-end infinite;
+            vertical-align: bottom;
+            margin-left: 2px;
+        }
+        
+        @keyframes blink {
+            50% {
+                opacity: 0;
+            }
+        }
+
+        /* Elegant and fluid gradient animation for text */
+        .animated-gradient {
+            background: linear-gradient(120deg, #2563eb, #3b82f6, #60a5fa, #2563eb); /* modrá, tmavšia svetlomodrá, svetlomodrá, modrá */
+            background-size: 400% 400%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+            animation: gradient-flow 20s ease infinite;
+            /* Fix for clipped letters */
+            display: inline-block;
+            padding-bottom: 0.1em;
+        }
+
+        @keyframes gradient-flow {
+            0% {
+                background-position: 0% 0%;
+            }
+            50% {
+                background-position: 100% 100%;
+            }
+            100% {
+                background-position: 0% 0%;
+            }
+        }
+    </style>
+</head>
+<body class="bg-white">
+
+    <header class="py-8 px-6">
+        <div class="w-full text-center">
+            <!-- 
+              LOGO:
+              Tento odkaz používa plnú URL adresu, aby sa logo zobrazilo v tomto náhľade.
+              Na vašom FTP serveri môžete zmeniť 'src' späť na relatívnu cestu 'Logo_baydeon.svg'.
+            -->
+            <img src="https://baydeon.com/Logo_baydeon.svg" alt="Logo Baydeon" class="h-7 w-auto mx-auto" onerror="this.onerror=null;this.src='https://placehold.co/100x28/ffffff/1d1d1f?text=baydeon';">
+        </div>
+    </header>
+
+    <main>
+        <!-- Section 1: Your project. Our expertise. -->
+        <section class="bg-white px-6 min-h-[calc(100vh-80px)] flex flex-col justify-center items-center">
+            
+            <div class="max-w-5xl w-full text-center">
+                <h2 class="text-4xl md:text-6xl font-bold tracking-tight text-gray-900 mb-4 leading-tight flex flex-col items-center">
+                    <!-- This container is now responsive: column on mobile, row on desktop -->
+                    <div class="flex flex-col items-center md:flex-row md:items-baseline md:gap-x-3">
+                        <span>Váš projekt.</span>
+                        <!-- Static text with unified color -->
+                        <span>Naša expertíza.</span>
+                    </div>
+                    <!-- Text with the new fluid gradient animation -->
+                    <span class="animated-gradient">Spoločný výsledok.</span>
+                </h2>
+                
+                <p class="max-w-2xl mx-auto text-lg md:text-xl text-gray-600 mb-8">
+                    Každý veľký nápad si zaslúži výnimočnú stratégiu. Spojme sily a premeňme vašu víziu na realitu — od marketingu cez kreatívu až po pokročilú AI automatizáciu.
+                </p>
+
+                <div class="flex flex-col justify-center items-center gap-8">
+                    <a href="https://form.asana.com/?k=AWk_EBdiP2xByeb8F6ws6A&d=1207325054334184" 
+                       class="inline-flex items-center bg-blue-600 text-white font-semibold py-3 px-7 rounded-full text-base transition-transform transform hover:scale-105 hover:bg-blue-700 shadow-sm hover:shadow-md"
+                       target="_blank">
+                       <span class="mr-2">💬</span>
+                       Začnime rozhovorom
+                    </a>
+                    
+                    <!-- Badges Container -->
+                    <div class="flex items-center justify-center gap-8">
+                        <!-- Google Partner Badge -->
+                        <a href="https://www.google.com/partners/agency?id=8740893392" target="_blank" class="transition-transform transform hover:scale-105">
+                            <img src="https://www.gstatic.com/partners/badge/images/2025/PartnerBadgeClickable.svg" alt="Odznak Google Partner" class="h-24"/>
+                        </a>
+                        <!-- Accredible Badge -->
+                        <a href="https://www.credential.net/84ea2cee-435d-46e7-8f6e-7918d1593313#acc.Rci5w9J8" target="_blank" class="transition-transform transform hover:scale-105">
+                            <img src="https://api.accredible.com/v1/frontend/credential_website_embed_image/badge/150734459" alt="Odznak Accredible" class="h-24"/>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Section 2: We are working on the full version -->
+        <section class="bg-[#1A1B1C] px-6 min-h-screen flex flex-col justify-center items-center">
+            <div class="max-w-4xl mx-auto text-center">
+                <h1 class="text-4xl md:text-6xl font-bold tracking-tight text-white mb-4">
+                    Plná verzia webu.
+                </h1>
+                <p class="max-w-2xl mx-auto text-lg md:text-xl text-gray-300 mb-12">
+                    Pripravujeme plnohodnotný web plný stratégií, riešení, návodov a nášho know-how.
+                </p>
+                
+                <div class="w-full max-w-lg mx-auto mt-12">
+                    <div id="code-container" class="font-mono text-sm text-left text-[#B1B1B1]">
+                        <!-- Code lines are dynamically generated by JavaScript -->
+                        <span id="code-line-1" class="block min-h-[1.2em] mb-2"></span>
+                        <span id="code-line-2" class="block min-h-[1.2em] mb-2"></span>
+                        <span id="code-line-3" class="block min-h-[1.2em] mb-2"></span>
+                        <span id="code-line-4" class="block min-h-[1.2em] mb-2"></span>
+                        <span id="code-line-5" class="block min-h-[1.2em] mb-2"></span>
+                        <span id="code-line-6" class="block min-h-[1.2em] mb-2"></span>
+                        <span id="code-line-7" class="block min-h-[1.2em] mb-2"></span>
+                        <span id="code-line-8" class="block min-h-[1.2em]"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+    (() => {
+        document.addEventListener('DOMContentLoaded', () => {
+
+            /**
+             * Utility function to pause execution for a given time (async).
+             * @param {number} ms - The number of milliseconds to sleep.
+             * @returns {Promise<void>} A promise that resolves after the specified time.
+             */
+            const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+
+            /**
+             * Manages the code typing animation in the second section.
+             * @namespace CodeAnimator
+             */
+            const CodeAnimator = {
+                // --- Configuration ---
+                CODE_BLOCKS: [
+                    [
+                        "import { api } from './utils';", 
+                        "import { render } from './ui';",
+                        "",
+                        "async function fetchData() {", 
+                        "  const user = await api.getUser('current');", 
+                        "  const posts = await api.getPosts(user.id);", 
+                        "  render({ user, posts });", 
+                        "}"
+                    ],
+                    [
+                        "class AnalyticsDashboard {",
+                        "  constructor(container) {",
+                        "    this.container = document.querySelector(container);",
+                        "    this.init();",
+                        "  }",
+                        "",
+                        "  init() {",
+                        "    console.log('Initializing dashboard...');",
+                        "  }",
+                        "}"
+                    ],
+                    [
+                        "// Deploying to production server", 
+                        "console.log('Starting deployment...');", 
+                        "run.lint();", 
+                        "run.preflightChecks();", 
+                        "run.build({ target: 'production' });", 
+                        "run.deploy('production-server');", 
+                        "await run.smokeTest();", 
+                        "console.log('🚀 Successfully Deployed!');"
+                    ]
+                ],
+                TYPING_SPEED: 60,
+                DELETING_SPEED: 2,
+                PAUSE_AFTER_TYPING: 2000,
+                PAUSE_AFTER_DELETING: 500,
+
+                // --- DOM Elements ---
+                elements: [],
+                // --- State ---
+                state: { blockIndex: 0, },
+
+                /**
+                 * Initializes the code animator.
+                 * @returns {void}
+                 */
+                init() {
+                    this.elements = Array.from({ length: 8 }, (_, i) => document.getElementById(`code-line-${i + 1}`));
+                    
+                    if (this.elements.some(el => !el)) {
+                        console.error('CodeAnimator initialization failed: one or more line elements not found.');
+                        return;
+                    }
+                    this.animate();
+                },
+
+                /**
+                 * Types a single line of code character by character.
+                 * @param {HTMLElement} element - The span element to type into.
+                 * @param {string} text - The text to type.
+                 */
+                async typeLine(element, text) {
+                    element.innerHTML = '';
+                    for (let i = 0; i < text.length; i++) {
+                        element.innerHTML += text.charAt(i);
+                        await sleep(this.TYPING_SPEED);
+                    }
+                    element.innerHTML += '<span class="code-cursor"></span>';
+                },
+
+                /**
+                 * Deletes a line of code character by character.
+                 * @param {HTMLElement} element - The span element to delete from.
+                 */
+                async deleteLine(element) {
+                    const cursor = element.querySelector('.code-cursor');
+                    if (cursor) cursor.remove();
+                    
+                    const text = element.textContent;
+                    for (let i = text.length; i >= 0; i--) {
+                        element.textContent = text.substring(0, i);
+                        await sleep(this.DELETING_SPEED);
+                    }
+                },
+
+                /**
+                 * The main, infinite animation loop that cycles through code blocks.
+                 * @returns {Promise<void>}
+                 */
+                async animate() {
+                    while (true) {
+                        const currentBlock = this.CODE_BLOCKS[this.state.blockIndex];
+                        
+                        // --- Typing Phase ---
+                        for (let i = 0; i < currentBlock.length; i++) {
+                            // Remove cursor from the previous line before typing the new one.
+                            if (i > 0) {
+                               const prevLine = this.elements[i - 1];
+                               if (prevLine) prevLine.innerHTML = prevLine.textContent;
+                            }
+                            if (this.elements[i]) {
+                               await this.typeLine(this.elements[i], currentBlock[i]);
+                            }
+                        }
+
+                        await sleep(this.PAUSE_AFTER_TYPING);
+
+                        // --- Deleting Phase ---
+                        for (let i = currentBlock.length - 1; i >= 0; i--) {
+                            if (this.elements[i]) {
+                               await this.deleteLine(this.elements[i]);
+                            }
+                        }
+
+                        // Move to the next block and pause briefly.
+                        this.state.blockIndex = (this.state.blockIndex + 1) % this.CODE_BLOCKS.length;
+                        await sleep(this.PAUSE_AFTER_DELETING);
+                    }
+                }
+            };
+
+            // --- Start All Animations ---
+            CodeAnimator.init();
+        });
+    })();
+    </script>
+
+<!-- ================================================================== -->
+    <!-- =====               PÄTIČKA (FOOTER) - KONTAKT               ===== -->
+    <!-- ================================================================== -->
+    <footer id="contact" class="bg-[#1A1B1C] text-white shadow-inner">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-center">
+                <div class="text-center">
+                    <address class="not-italic text-gray-400">
+                        <p>Lermontovova 911/3</p>
+                        <p>811 05 Bratislava - Staré Mesto</p>
+                        <p>Slovenská republika</p>
+                    </address>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ================================================================== -->
+    <!-- =====                KONIEC PÄTIČKY (FOOTER)                 ===== -->
+    <!-- ================================================================== -->
+<!-- Footer -->
+    <footer class="text-center py-10 px-6 bg-[#1A1B1C]">
+        <p class="text-sm text-gray-400">created with heart by</p>
+        <p class="text-sm font-bold text-gray-200">baydeon</p>
+    </footer>
+
+    <!-- 
+      Refactored and Cleaned UI and Animation Logic.
+      - Encapsulated in an IIFE to prevent global scope pollution.
+      - Added detailed JSDoc comments for better maintainability.
+      - No changes to visual functionality.
+    -->
+</body>
+</html>
